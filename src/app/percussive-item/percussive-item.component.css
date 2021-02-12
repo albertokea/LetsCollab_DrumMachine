@@ -1,0 +1,29 @@
+.container{
+    background-color: #001;
+}
+
+.drum-group{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.drum-item{
+    width: 1em;
+    height: 2em;
+    background-color: grey;
+    border-radius: 10px;
+    margin: 0 1em;
+    cursor: pointer;
+}
+
+.instruments{
+    margin-top: 2em;
+}
+
+.green{
+    background-color: chartreuse;
+}
+
+.grey{
+    background-color: grey;
+}

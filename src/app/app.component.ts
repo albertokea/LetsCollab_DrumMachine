@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LetsCollab';
+
+  instrument: string;
+
+  /*   arrActives: boolean[]; */
+
+  constructor() {
+
+  }
+
+  onPresets(actives) {
+    /*     this.arrActives = actives; */
+  }
 }
