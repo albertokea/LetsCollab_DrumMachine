@@ -1,6 +1,6 @@
 <div class="container">
-    <button (click)="startLoop()">{{playOrStop}}</button>
     <div class="instruments">
+        <h3>{{this.instrumentName}}</h3>
         <div class="drum-group">
             <div class="drum-item" *ngFor="let div of arrActives; let index = index" (click)="activate(index)"
                 [ngClass]="{grey:(arrActives[index]===false), green:(arrActives[index]===true)}"></div>

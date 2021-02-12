@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'percussive-item',
@@ -11,7 +11,6 @@ export class PercussiveItemComponent implements OnInit {
 
   soundActive: boolean;
   arrActives: boolean[];
-  playOrStop: string;
   tempo: number;
   count: number;
   loopInterval: any;
@@ -19,8 +18,7 @@ export class PercussiveItemComponent implements OnInit {
   constructor() {
     this.arrActives =
       [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
-    this.playOrStop = 'Play';
-    this.tempo = 1000;
+    this.tempo = 345;
     this.count = 0;
   }
 
@@ -35,7 +33,7 @@ export class PercussiveItemComponent implements OnInit {
   playSound() {
     const audio = new Audio(`../assets/audio/${this.instrumentName}.wav`);
     let index = 0;
-    this.playOrStop = 'Stop';
+
     this.loopInterval = setInterval(() => {
       if (this.arrActives[index] === true) {
         audio.play();
@@ -55,7 +53,6 @@ export class PercussiveItemComponent implements OnInit {
     if (this.count % 2 != 0) {
       this.playSound();
     } else {
-      this.playOrStop = 'Play';
       clearInterval(this.loopInterval);
     }
   }

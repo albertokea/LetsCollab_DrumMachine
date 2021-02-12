@@ -9,14 +9,22 @@ export class AppComponent {
   title = 'LetsCollab';
 
   instrument: string;
-
-  /*   arrActives: boolean[]; */
+  buttonText: string;
+  changeText: boolean;
 
   constructor() {
+    this.buttonText = 'Play';
+    this.changeText = true;
+  }
+
+  onClick() {
 
   }
 
-  onPresets(actives) {
-    /*     this.arrActives = actives; */
+  playOrStop() {
+    (this.changeText) ? this.buttonText = 'Stop' : this.buttonText = 'Play';
+    this.changeText = !this.changeText;
   }
+
 }
+

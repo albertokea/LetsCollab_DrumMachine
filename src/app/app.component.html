@@ -1,2 +1,8 @@
-<button>Este deberia ser el boton para iniciar el interval</button>
-<percussive-item instrumentName="kick"></percussive-item>
+<button (click)="kickItem.startLoop()" (click)="snareItem.startLoop()" (click)="hihat1Item.startLoop()"
+    (click)="hihat2Item.startLoop()" (click)="openhihatItem.startLoop()" (click)="playOrStop()">
+    {{buttonText}}</button>
+<percussive-item instrumentName="kick" #kickItem></percussive-item>
+<percussive-item instrumentName="snare" #snareItem></percussive-item>
+<percussive-item instrumentName="hihat1" #hihat1Item></percussive-item>
+<percussive-item instrumentName="hihat1" #hihat2Item></percussive-item>
+<percussive-item instrumentName="openhihat" #openhihatItem></percussive-item>
